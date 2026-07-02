@@ -111,9 +111,45 @@ class BST:
 
 if __name__ == "__main__":
     tree = BST()
-    tree.insert("Kathmandu", City("Kathmandu", 27.7172, 85.3240, 1_500_000, 0))
-    tree.insert("Pokhara", City("Pokhara", 28.2096, 83.9856, 400_000, 200))
-    tree.insert("Butwal", City("Butwal", 27.7000, 83.4486, 150_000, 280))
-    print(tree.search("Pokhara"))
-    print("Inorder:", tree.inorder())
-    print("Height:", tree.height())
+    cities = [
+        City("Kathmandu", 27.7172, 85.3240, 1_500_000, 0),
+        City("Pokhara", 28.2096, 83.9856, 400_000, 200),
+        City("Butwal", 27.7000, 83.4486, 150_000, 280),
+        City("Biratnagar", 26.4525, 87.2718, 250_000, 400),
+        City("Dharan", 26.8065, 87.2846, 150_000, 370),
+    ]
+
+    print("=" * 50)
+    print("BINARY SEARCH TREE - DEMO")
+    print("=" * 50)
+
+    print("\nInsertion:")
+    for c in cities:
+        tree.insert(c.name, c)
+        print(f"  Inserted -> {c.name}")
+
+    print("\nInorder Traversal (sorted by key):")
+    for key, city in tree.inorder():
+        print(f"  {key:<12} pop={city.population:<10} dist={city.distance}")
+
+    print(f"\nTree Height: {tree.height()}")
+    print(f"Total Nodes: {len(tree)}")
+
+    print("\nSearch:")
+    for name in ["Pokhara", "Itahari"]:
+        result = tree.search(name)
+        status = "FOUND" if result else "NOT FOUND"
+        print(f"  {name:<12} -> {status}")
+
+    print("\nDeletion:")
+    for name in ["Butwal", "Itahari"]:
+        deleted = tree.delete(name)
+        status = "DELETED" if deleted else "NOT FOUND"
+        print(f"  {name:<12} -> {status}")
+
+    print("\nFinal Inorder Traversal:")
+    for key, city in tree.inorder():
+        print(f"  {key:<12} pop={city.population:<10} dist={city.distance}")
+
+    print(f"\nTotal Nodes: {len(tree)}")
+    print("=" * 50)

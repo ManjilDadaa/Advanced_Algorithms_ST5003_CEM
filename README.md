@@ -12,29 +12,29 @@ Individual coursework implementing advanced data structures, graph algorithms, a
 ```
 advanced-algorithms-cw/
 ├── task1_data_structures/
-│   ├── bst.c
-│   ├── avl.c
-│   ├── min_heap.c
-│   ├── hash_table.c
-│   └── benchmark.c
+│   ├── bst.py
+│   ├── avl.py
+│   ├── min_heap.py
+│   ├── hash_table.py
+│   └── benchmark.py
 ├── task2_graph_algorithms/
-│   ├── graph.c
-│   ├── dijkstra.c
-│   ├── prim.c
-│   ├── bellman_ford.c
-│   └── benchmark.c
+│   ├── graph.py
+│   ├── dijkstra.py
+│   ├── prim.py
+│   ├── bellman_ford.py
+│   └── benchmark.py
 ├── task3_paradigms/
-│   ├── dp_<chosen_problem>.c
-│   ├── greedy_<chosen_problem>.c
-│   └── backtracking_<chosen_problem>.c
+│   ├── dp_<chosen_problem>.py
+│   ├── greedy_<chosen_problem>.py
+│   └── backtracking_<chosen_problem>.py
 ├── task4_np_hard/
-│   ├── <chosen_problem>.c
-│   ├── heuristic1_<name>.c
-│   └── heuristic2_<name>.c
+│   ├── <chosen_problem>.py
+│   ├── heuristic1_<name>.py
+│   └── heuristic2_<name>.py
 ├── task5_concurrent/
-│   ├── sequential_version.c
-│   ├── parallel_version.c
-│   └── benchmark.c
+│   ├── sequential_version.py
+│   ├── parallel_version.py
+│   └── benchmark.py
 ├── results/
 │   ├── graphs/
 │   └── raw_data/
